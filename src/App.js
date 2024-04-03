@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import CustomTooltip from './CustomTooltip';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ marginTop: '50px', textAlign: 'center' }}>
+      <h1>React Bootstrap Tooltip Example</h1>
+      <CustomTooltip text="Hey this is a tooltip made by me Santanu">
+        <button className="btn btn-primary" style={{ marginRight: '10px',marginTop:'100px' }}>
+          Hover over me
+        </button>
+      </CustomTooltip>
+      <CustomTooltip text="Another tooltip">
+        <span style={{ textDecoration: 'underline', cursor: 'pointer' }}></span>
+      </CustomTooltip>
     </div>
   );
-}
+};
 
 export default App;
